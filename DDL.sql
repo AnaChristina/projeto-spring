@@ -34,7 +34,7 @@ create table uau_usuario_autorizacao (
 create table ant_anotacao (
     ant_id bigint unsigned not null auto_increment,
     ant_texto varchar(250) not null, 
-    ant_data datatime not null,
+    ant_data datetime not null,
     ant_usr_id bigint unsigned not null,
     primary key (ant_id),
     foreign key ant_usr_fk (ant_usr_id) references usr_usuario(usr_id)
@@ -42,5 +42,5 @@ create table ant_anotacao (
 
 insert into usr_usuario (usr_nome, usr_senha) values ('admin', 'SENHA123');
 insert into aut_autorizacao (aut_nome) values ('ROLE_ADMIN');
-insert into uau_usuario_autorizacao(usr_id, aut_id) valeus (1, 1);
-insert into ant_anotacao (ant_texto, ant_data, ant_usr_id0) values ('Meu novo projeto', '2023-08-01', 1);
+insert into uau_usuario_autorizacao (usr_id, aut_id) values (1,1);
+insert into ant_anotacao (ant_texto, ant_data, ant_usr_id) values ('Meu novo projeto', '2023-08-01', 1);
